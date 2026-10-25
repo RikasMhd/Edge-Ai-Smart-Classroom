@@ -1,0 +1,21 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ffmpeg \
+    libglib2.0-0 \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY backend/requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY backend/ ./backend/
+COPY TrainingData.ONNX/ ./TrainingData.ONNX/
+COPY data/ ./data/
+
+ENV PYTHONPATH=/app
+
+EXPOSE 5000
+
+CMD ["python", "backend/app.py"]
