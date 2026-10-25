@@ -40,6 +40,7 @@
 | LOW       | 1–2    | OFF      | —           |
 | MEDIUM    | 3–9    | ON       | 24°C        |
 | HIGH      | 10+    | ON       | 20°C        |
+| Janitor   | countless| OFF    | --
 
 ---
 
