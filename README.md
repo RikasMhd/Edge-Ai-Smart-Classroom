@@ -191,3 +191,13 @@ POST /api/infer
 | Icons | Lucide React |
 | Container | Docker |
 | Version Control | Git + GitHub |
+
+
+## Trained Model
+
+The trained model is hosted on Hugging Face:
+https://huggingface.co/rikasmhd20/Edge-Ai-Smart-Classroom
+
+### Setup
+1. Download the model files from the link above.
+2. Place them inside the `TrainingData.ONNX/` folder in the project root.
